@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-08T21:57:22.328Z",
+    "end": "2021-12-08T21:57:35.447Z",
+    "duration": 13119,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f71543fb-ff8f-4be0-bacb-6b7c1901abe3",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd20694f-bd65-486f-ae2c-fa27d4ba51d4",
+          "title": "Cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando eu informar os dados e finalizar, então o cadastro deve ser efetuado",
+              "fullTitle": "Cadastro Quando eu informar os dados e finalizar, então o cadastro deve ser efetuado",
+              "timedOut": null,
+              "duration": 11313,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php?controller=authentication&back=my-account');\ncy.get('#email_create').type(chance.email());\ncy.get('button#SubmitCreate').click();\ncy.url('contain', 'account-creation');\ncy.get('#id_gender1').check();\ncy.get('#customer_firstname').type(chance.first());\ncy.get('#customer_lastname').type(chance.last());\ncy.get('#passwd').type(chance.word({\n  length: 5\n}));\ncy.get('#days').select('7');\ncy.get('#months').select('August');\ncy.get('#years').select('1987');\ncy.get('#newsletter').check();\ncy.get('#optin').check();\ncy.get('#firstname').type(chance.first());\ncy.get('#lastname').type(chance.last());\ncy.get('#company').type(chance.last());\ncy.get('#address1').type(chance.address());\ncy.get('#address2').type(chance.areacode());\ncy.get('#id_country').select('21');\ncy.get('#city').type(chance.city());\ncy.get('#postcode').type(chance.zip());\ncy.get('select#id_state').select('Florida', {\n  force: true\n});\ncy.get('#other').type(chance.sentence());\ncy.get('#phone').type(chance.phone());\ncy.get('#phone_mobile').type(chance.phone());\ncy.get('#alias').type(chance.address());\ncy.get('#submitAccount').click();\ncy.url('contain', 'my-account');",
+              "err": {},
+              "uuid": "5e48a2dc-4a81-446b-8905-149ff8429edc",
+              "parentUUID": "fd20694f-bd65-486f-ae2c-fa27d4ba51d4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5e48a2dc-4a81-446b-8905-149ff8429edc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11313,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reporterDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
